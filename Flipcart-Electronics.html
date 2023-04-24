@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipcart</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root {
+  --main-color: #2874f0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto,Arial,sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+#Electronics-container{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin-top: 2%;
+width: 100%;
+
+position: relative;
+}
+.headind-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  gap: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.287);
+ position: relative;
+  padding: 1vw;
+
+}
+.headind-container img{
+  position: relative;
+  width: 20%;
+  left: 1%;
+  height:auto;
+  z-index: -1;
+}
+.headind-container h1{
+font-size: 3.5vw;
+color: #424242;
+text-shadow: 15px 1px 10px rgba(1, 1, 1, 0.178);
+font-weight: bold;
+padding: 1vw;
+}
+.headind-container button{
+border: none;
+background-color: var(--main-color);
+color: white;
+cursor: pointer;
+font-weight: normal;
+border-radius: 5px;
+padding: 1vw 3vw;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.438);
+}
+.headind-container button:hover{
+  background-color: #008ffd;
+}
+.items-container{
+  padding: 0vw .5vw;
+width: 100%;
+/* border: 1px solid red; */
+display: flex;
+overflow-x: scroll;
+}
+.item-card{
+  margin-top: 1%;
+  padding: 2% 1%;
+display: flex;
+/* flex: 10 0 90px; */
+align-items: center;
+justify-content: start;
+flex-direction: column;
+width: 50%;
+/* border: 1px solid rgb(255, 0, 195); */
+text-align: center;
+text-transform: capitalize;
+gap: 5px;
+cursor: pointer;
+}
+.item-card .image-container {
+width: 200px;
+height:200px;
+display: flex;
+align-items: center;
+justify-content: center;
+/* border: 1px solid rgb(224, 25, 255); */
+position: relative;
+}
+.item-card img{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  opacity: 1;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+.item-card img:hover{
+  transform: scale(110%);
+}
+.item-card h6{
+font-size: 1.5vw;
+}
+.item-card a {
+text-decoration: none;
+color: green;
+font-size: 1.5vw;
+}
+.item-card .description{
+  font-size: 1.5vw;
+  color: gray;
+}
+.items-container::-webkit-scrollbar {
+  height: 10px;
+  
+}
+
+.items-container::-webkit-scrollbar-thumb {
+  background-color: #5394e9;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.items-container::-webkit-scrollbar-track {
+  background-color: #ececec;
+}
+
+.items-container::-webkit-scrollbar-button {
+  background-color: #888686;
+  width: 0px;
+
+  border-radius: 5px;
+}
+@media (max-width: 800px) {
+  .item-card .image-container {
+    width: 110px;
+    height:110px;
+    
+    }
+}
+@media (max-width: 500px) {
+  .item-card .image-container {
+    width: 100px;
+    height:100px;
+    
+    }
+    
+    .items-container::-webkit-scrollbar {
+      height: 8px;
+      
+    }
+
+}
+@media (max-width: 400px){
+  .item-card .image-container {
+    width: 60px;
+    height:60px;
+    
+    }
+    
+
+}
+
+    </style>
+</head>
+<body>
+    <section id="Electronics-container">
+        <div class="headind-container">
+            <img src="/Headline-images/2.jpg" alt="">
+            <h1>Best Of Electronics</h1>
+            <button>View All</button>
+        </div>
+        <div class="items-container">
+            <div class="item-card" id="item-card">
+                <a href="" class="image-container"><img src="/Best of electonics/1.jpeg" alt=""></a>
+                <h6>Projector</h6>
+                <a href=""><span>Shop now</span></a>
+                <span class="description">egate</span>
+            </div>
+        </div>
+    </section>
+    <script>
+        
+let electronicsArray = [
+    {
+        image:'/Best of electonics/7.jpeg',
+        name:'asus monitors',
+        price:'from ₹14999',
+        description:'top rated'
+    },
+    {
+        image:'/Best of electonics/2.jpeg',
+        name:'Best Cameras',
+        price:'from ₹30999',
+        description:'Sony'
+    },
+    {
+        image:'/Best of electonics/3.jpeg',
+        name:'printers',
+        price:'from ₹3999',
+        description:'hp'
+    },
+    {
+        image:'/Best of electonics/4.jpeg',
+        name:'top mirrorless cameras',
+        price:'shop now',
+        description:'canon,sony,others..'
+    },
+    {
+        image:'/Best of electonics/5.jpeg',
+        name:'Headphones',
+        price:'from ₹999',
+        description:'boat'
+    },
+    {
+        image:'/Best of electonics/6.jpeg',
+        name:'Best of hair dryers',
+        price:'from ₹599',
+        description:'realme, philips & more'
+    },
+    {
+        image:'/Best of electonics/7.jpeg',
+        name:'monitor',
+        price:'from ₹8999',
+        description:'dell'
+    }
+];
+
+electronicsArray.forEach((electronicsitems) => {
+    const electronicsAllItems = document.querySelector('#Electronics-container .items-container');
+    electronicsAllItems.innerHTML += 
+    ` <div class="item-card" id="item-card">
+    <a href="" class="image-container"><img src="${electronicsitems.image}" alt=""></a>
+    <h6>${electronicsitems.name}</h6>
+    <a href=""><span>${electronicsitems.price}</span></a>
+    <span class="description">${electronicsitems.description}</span>
+    </div>
+    `;
+})  
+    </script>
+</body>
+</html>
