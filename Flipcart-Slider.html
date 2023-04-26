@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipcart</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+:root {
+  --main-color: #2874f0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto,Arial,sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right,rgb(134, 184, 242), rgb(0, 43, 128));
+}
+
+#slider-container{
+  width: 100%;
+  position: relative;
+  margin-top: 1%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.182);
+}
+.image-container{
+  width: 100%;
+}
+#slider-image{
+  width: 100%;
+}
+.button-container{
+display: flex;
+align-items: center;
+justify-content: space-between;
+position: absolute;
+padding: 0 .5%;
+width: 100%;
+height: 100%;
+top: 0%;
+}
+.slide-btn{
+  cursor: pointer;
+width: 3%;
+background-color: rgba(255, 255, 255, 0.915);
+border: none;
+border-radius:5px;
+height: 50px;
+font-size: 2vw;
+}
+
+    </style>
+</head>
+<body>
+        <section id="slider-container">
+        <div class="image-container">
+            <img src="/slider/1.jpg" alt="" id="slider-image">
+            <div class="button-container">
+                <button class="prev slide-btn">&#8249;</button>
+                <button class="next slide-btn">&#8250;</button>
+            </div>
+        </div>
+        
+    </section>
+<script>
+    const slider = document.querySelector('#slider-image');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let imagesArray = [
+    'slider/2.jpg', 'slider/3.jpg', 'slider/4.jpg', 'slider/1.jpg'
+];
+
+var i = 0;
+prevBtn.addEventListener('click', prevImage)
+
+function prevImage() {
+    i--;
+    if (i < 0) {
+        i = imagesArray.length - 1;
+    }
+    slider.src = imagesArray[i];
+}
+
+nextBtn.addEventListener('click', nextImage)
+
+function nextImage() {
+    i++;
+    if (i === imagesArray.length) {
+        i = 0;
+    }
+    slider.src = imagesArray[i];
+}
+
+setInterval(() => {
+    nextImage();
+}, 2000)
+
+</script>
+</body>
+</html>
