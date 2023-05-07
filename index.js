@@ -36,7 +36,7 @@ setInterval(() => {
 
 let electronicsArray = [
     {
-        image:'/Best of electonics/7.jpeg',
+        image:'Best of electonics/7.jpeg',
         name:'asus monitors',
         price:'from ₹14999',
         description:'top rated'
@@ -95,7 +95,7 @@ electronicsArray.forEach((electronicsitems) => {
 
 let TopDealsArray = [
     {
-        image:'/Top-Deals/7.jpeg',
+        image:'Top-Deals/7.jpeg',
         name:'Watches',
         price:'From ₹3999',
         description:'#1 best seller!'
@@ -155,7 +155,7 @@ TopDealsArray.forEach((TopDealsArray) => {
 
 let fashionTrendsArray = [
     {
-        image:'/Fashion/1.jpeg',
+        image:'Fashion/1.jpeg',
         name:'organza sarees',
         price:'flat 70% off',
         description:'shop now'
